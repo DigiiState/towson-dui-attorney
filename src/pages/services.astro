@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const phone = "866-891-9778";
+const city = "Phoenix";
+const niche = "Septic Pumping";
+
+const images = {
+  "Septic Pumping": "https://sc02.alicdn.com/kf/A51bdf3e42e8747b2bdd0fa8cee59f09db.png",
+  "Tree Removal": "https://sc02.alicdn.com/kf/A0520d497b79e4c58b61a5f769cd41f14V.png",
+  "Water Damage": "https://sc02.alicdn.com/kf/A4fe71a4344644752848c5328899d28f41.png",
+  "DUI Defense": "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fer.png"
+};
+
+const serviceImage = images[niche] || images["Septic Pumping"];
+---
+
+<Layout 
+	title={`Services | ${city} MD ${niche} & Emergency Solutions`}
+	phone={phone}
+	city={city}
+	niche={niche}
+>
+	<main class="max-w-6xl mx-auto px-6 py-20">
+		<h1 class="text-4xl font-black mb-12 border-b-4 border-red-600 inline-block uppercase tracking-tighter">Our Maryland Services</h1>
+		
+		<div class="space-y-32">
+			<!-- Service 1 -->
+			<div class="grid md:grid-cols-2 gap-16 items-center">
+				<img src={serviceImage} alt="Primary Service" class="w-full h-80 object-cover rounded shadow-lg" />
+				<div>
+					<h2 class="text-3xl font-bold text-[#28657c] mb-6 uppercase tracking-tighter">Full-Service {niche}</h2>
+					<p class="text-slate-600 leading-relaxed mb-8">We provide comprehensive {niche} solutions tailored to the specific needs of {city} residents. From routine maintenance to complex system diagnostics, we handle it all with local expertise.</p>
+					<a href="/contact" class="inline-block bg-[#28657c] text-white px-8 py-3 font-bold uppercase tracking-tighter hover:bg-[#1e4e5e] transition-colors">Request a Quote</a>
+				</div>
+			</div>
+
+			<!-- Service 2 -->
+			<div class="grid md:grid-cols-2 gap-16 items-center">
+				<div class="order-2 md:order-1">
+					<h2 class="text-3xl font-bold text-[#28657c] mb-6 uppercase tracking-tighter">24/7 Emergency Support</h2>
+					<p class="text-slate-600 leading-relaxed mb-8">System failures don't happen on a schedule. That's why we offer around-the-clock emergency response for the {city} community. We'll be there when you need us most.</p>
+					<a href={`tel:${phone.replace(/-/g, '')}`} class="inline-block border-2 border-[#28657c] text-[#28657c] px-8 py-3 font-bold uppercase tracking-tighter hover:bg-[#28657c] hover:text-white transition-colors">Call Dispatch Now</a>
+				</div>
+				<img src="https://sc02.alicdn.com/kf/A7bbd8d3c7a744fa994400de2ba60f6617.png" alt="Emergency Service" class="w-full h-80 object-cover rounded shadow-lg order-1 md:order-2" />
+			</div>
+
+			<!-- Service 3 -->
+			<div class="grid md:grid-cols-2 gap-16 items-center">
+				<img src="https://sc02.alicdn.com/kf/A75a46d3e08dc416fb1c66c63924c2a00F.png" alt="Inspection" class="w-full h-80 object-cover rounded shadow-lg" />
+				<div>
+					<h2 class="text-3xl font-bold text-[#28657c] mb-6 uppercase tracking-tighter">Professional Inspections</h2>
+					<p class="text-slate-600 leading-relaxed mb-8">Buying or selling a home in Howard County? Our certified inspections provide the documentation and peace of mind you need for a smooth transaction.</p>
+					<a href="/contact" class="inline-block bg-[#28657c] text-white px-8 py-3 font-bold uppercase tracking-tighter hover:bg-[#1e4e5e] transition-colors">Schedule Inspection</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>

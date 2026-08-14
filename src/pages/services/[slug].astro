@@ -1,0 +1,203 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'septic-pumping' } },
+    { params: { slug: 'drain-field-repair' } },
+    { params: { slug: 'inspections' } },
+    { params: { slug: 'grease-traps' } },
+    { params: { slug: 'emergency-removal' } },
+    { params: { slug: 'tree-trimming' } },
+    { params: { slug: 'stump-grinding' } },
+    { params: { slug: 'storm-damage' } },
+    { params: { slug: 'water-extraction' } },
+    { params: { slug: 'mold-remediation' } },
+    { params: { slug: 'waterproofing' } },
+    { params: { slug: 'drying' } },
+    { params: { slug: 'dui-defense' } },
+    { params: { slug: 'mva-hearings' } },
+    { params: { slug: 'traffic-defense' } },
+    { params: { slug: 'criminal-defense' } }
+  ];
+}
+
+const { slug } = Astro.params;
+
+const phone = "866-891-9778";
+const city = "Phoenix";
+const niche = "Septic Pumping";
+
+// Expanded Content Database with Specific Images
+const contentDb: Record<string, any> = {
+  // SEPTIC
+  "septic-pumping": {
+    name: "Septic Tank Pumping",
+    title: `Septic Tank Pumping in ${city}, MD | Full Service Maintenance`,
+    image: "https://sc02.alicdn.com/kf/A8239af84c8564874a21b4fcef95323a97.png",
+    text: `Looking for professional septic tank pumping in ${city}, MD? Regular maintenance is the most critical factor in extending the life of your septic system. Our team uses industrial-grade vacuum trucks to perform a complete extraction of solids and liquids, ensuring your tank is thoroughly cleaned and inspected. In ${city}, homeowners face unique soil challenges that can lead to premature system failure if not maintained properly.`
+  },
+  "drain-field-repair": {
+    name: "Drain Field Repair",
+    title: `Drain Field Repair & Restoration ${city} MD | Save Your Septic`,
+    image: "https://sc02.alicdn.com/kf/A8a987285fb064e4085f8b86bc688f48aD.png",
+    text: `Is your yard in ${city} soggy or smelling of sewage? You likely have a drain field issue. Full system replacements can cost over $20,000, but our specialized restoration techniques can often save your existing field for a fraction of the price. We use Maryland-approved methods like aerobic bacterial treatments and high-pressure jetting to clear clogs and restore soil absorption.`
+  },
+  "inspections": {
+    name: "System Inspections",
+    title: `Septic System Inspections ${city} MD | Real Estate Certifications`,
+    image: "https://sc02.alicdn.com/kf/A1c0cdafca85f40479b7f34f61a5b75357.png",
+    text: `Buying or selling a home in ${city}? Our certified Maryland septic inspectors provide comprehensive system audits required for real estate transfers. We check tank integrity, baffle condition, and drain field performance to give you a clear picture of the system's health before you sign on the dotted line.`
+  },
+  "grease-traps": {
+    name: "Grease Trap Cleaning",
+    title: `Commercial Grease Trap Cleaning ${city} MD | Restaurant Services`,
+    image: "https://sc02.alicdn.com/kf/A51bdf3e42e8747b2bdd0fa8cee59f09db.png",
+    text: `For ${city} restaurant owners, a clogged grease trap can shut down your business in an instant. We provide scheduled and emergency grease trap pumping to keep your commercial kitchen compliant and odor-free. Our team handles all documentation required by Maryland environmental health inspectors.`
+  },
+  // TREE
+  "emergency-removal": {
+    name: "Emergency Tree Removal",
+    title: `24/7 Emergency Tree Removal ${city} MD | Storm Damage Care`,
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80",
+    text: `When a storm hits ${city}, trees don't wait for business hours. Our emergency response team is on standby 24/7 to handle fallen trees on houses, blocked driveways, and hazardous hanging limbs. We utilize specialized cranes and rigging equipment to safely remove massive debris without further damaging your property.`
+  },
+  "tree-trimming": {
+    name: "Tree Trimming & Pruning",
+    title: `Professional Tree Trimming ${city} MD | Arborist Care`,
+    image: "https://sc02.alicdn.com/kf/Afe3aa9e81b0e495a85667f4139b9cf639.png",
+    text: `Maintain the health and beauty of your ${city} landscape with professional tree trimming and pruning. Our licensed arborists identify dead wood, promote healthy growth, and ensure proper clearance from power lines and structures. Regular pruning prevents storm damage before it happens.`
+  },
+  "stump-grinding": {
+    name: "Stump Grinding & Removal",
+    title: `Stump Grinding Service ${city} MD | Clear Your Yard`,
+    image: "https://sc02.alicdn.com/kf/A9962bdae5c8b41f2a1381f29902be6659.png",
+    text: `Unsightly stumps are more than just a tripping hazard—they attract pests like termites and carpenter ants. Our high-power stump grinding machinery can remove any size stump in your ${city} yard, grinding it well below the surface so you can replant grass or flowers immediately.`
+  },
+  "storm-damage": {
+    name: "Storm Damage Care",
+    title: `Storm Damage Tree Cleanup ${city} MD | After-Storm Recovery`,
+    image: "https://sc02.alicdn.com/kf/Aa06c0c3f7ae44f5ca0dc3bec04420a67Q.png",
+    text: `After a major Maryland storm, your property in ${city} may be littered with dangerous branches and debris. We provide comprehensive after-storm cleanup, safely removing hanging "widow-makers" and ensuring your trees are structurally sound for the future.`
+  },
+  // WATER
+  "water-extraction": {
+    name: "Water Extraction",
+    title: `Emergency Water Extraction ${city} MD | Flood Cleanup`,
+    image: "https://sc02.alicdn.com/kf/A4fe71a4344644752848c5328899d28f41.png",
+    text: `Whether it's a burst pipe or a flash flood, water damage needs to be addressed in minutes. Our ${city} water extraction team uses industrial-strength truck-mounted vacuums to remove standing water from carpets, basements, and crawl spaces before permanent damage sets in.`
+  },
+  "mold-remediation": {
+    name: "Mold Remediation",
+    title: `Mold Removal & Remediation ${city} MD | Safe Home Solutions`,
+    image: "https://sc02.alicdn.com/kf/Aedea520dd6c94527a81af1b11ce2d74fj.png",
+    text: `Mold can begin growing in as little as 24 hours after water exposure. We provide certified mold remediation in ${city}, MD, using HEPA filtration and antimicrobial treatments to ensure your home's air quality is safe for your family. We identify the source of moisture to prevent mold from returning.`
+  },
+  "waterproofing": {
+    name: "Basement Waterproofing",
+    title: `Basement Waterproofing ${city} MD | Keep Your Home Dry`,
+    image: "https://sc02.alicdn.com/kf/A78dfb8313fdd4f2da31f98dea56cfbd6e.png",
+    text: `Maryland's wet climate and heavy soil can lead to chronic basement leaks. Our ${city} waterproofing specialists install interior and exterior drainage systems, sump pumps, and wall sealants to protect your home's foundation and keep your basement dry all year round.`
+  },
+  "drying": {
+    name: "Structural Drying",
+    title: `Structural Drying & Dehumidification ${city} MD`,
+    image: "https://sc02.alicdn.com/kf/A85d9ce0f5033435297678cfa385d633bU.png",
+    text: `Extracting water is only the first step. Our ${city} drying team utilizes industrial air movers and LGR dehumidifiers to pull moisture out of wall studs, subfloors, and drywall. This deep-drying process is essential to prevent structural rot and long-term mold issues.`
+  },
+  // LAW
+  "dui-defense": {
+    name: "DUI Defense",
+    title: `DUI Defense Attorney ${city} MD | Legal Protection`,
+    image: "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fer.png",
+    text: `Facing a DUI in ${city} is a serious crisis. We provide aggressive legal defense, analyzing every detail of your arrest—from the initial traffic stop to the accuracy of breathalyzer tests. Our local Maryland attorneys know the Anne Arundel and Baltimore County court systems inside and out.`
+  },
+  "mva-hearings": {
+    name: "MVA License Hearings",
+    title: `MVA License Hearing Defense ${city} MD | Keep Driving`,
+    image: "https://sc02.alicdn.com/kf/A4d9c24cd498f42e4bc604dbc01af4daf4.png",
+    text: `After a DUI arrest in ${city}, you only have a few days to request an MVA hearing to save your license. We represent you at these administrative hearings, fighting to maintain your driving privileges and your ability to work and care for your family in Maryland.`
+  },
+  "traffic-defense": {
+    name: "Traffic Ticket Defense",
+    title: `Maryland Traffic Ticket Lawyer ${city} MD | Point Reduction`,
+    image: "https://sc02.alicdn.com/kf/Adfcafde8368c418aa9b21774af51f8f1X.png",
+    text: `Don't let points accumulate on your Maryland driving record. We provide professional defense for speeding tickets, reckless driving, and other traffic offenses in the ${city} area. Our goal is to reduce your fines and protect your insurance rates from skyrocketing.`
+  },
+  "criminal-defense": {
+    name: "Criminal Defense",
+    title: `Criminal Defense Attorney ${city} MD | Aggressive Representation`,
+    image: "https://sc02.alicdn.com/kf/A8d6f4a0cd1df41478cd1c294574b35bf0.png",
+    text: `If you've been charged with a crime in ${city}, you need a local attorney who will fight for your rights. We handle a wide range of criminal cases in Maryland, from misdemeanors to serious felonies, providing the professional counsel and investigation needed for your defense.`
+  }
+};
+
+const page = contentDb[slug] || contentDb["septic-pumping"];
+---
+
+<Layout 
+	title={page.title}
+	phone={phone}
+	city={city}
+	niche={niche}
+>
+	<!-- 1. Hero (Mirroring Irving Structure) -->
+	<section class="relative bg-slate-800 py-32 text-center text-white bg-cover bg-center" style={`background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${page.image}');`}>
+		<div class="container mx-auto px-6">
+			<h1 class="text-[50px] font-bold leading-tight mb-4 uppercase tracking-tighter">{page.name} {city} MD</h1>
+			<h3 class="text-xl font-medium mb-10 opacity-90 uppercase tracking-widest">Professional {niche} Solutions for Maryland Neighbors</h3>
+			<a href={`tel:${phone.replace(/-/g, '')}`} class="inline-block bg-white text-[#28657c] font-bold text-2xl px-12 py-4 border-2 border-white hover:bg-transparent hover:text-white transition-all uppercase tracking-tighter">
+				Call For {page.name}: {phone}
+			</a>
+		</div>
+	</section>
+
+	<!-- 2. Main Content Stack (Mimicking Irving Side-by-Side) -->
+	<section class="py-20 bg-white">
+		<div class="container mx-auto px-6 grid md:grid-cols-3 gap-16 items-start">
+			<div class="md:col-span-2">
+				<h2 class="text-4xl font-bold text-[#28657c] mb-8 uppercase tracking-tighter">{page.name} Experts in {city}, MD</h2>
+				<div class="prose prose-lg text-slate-600 space-y-8">
+					<p class="text-xl leading-relaxed">{page.text}</p>
+					
+					<div class="my-12">
+						<img src={page.image} alt={page.name} class="w-full h-[450px] object-cover rounded shadow-2xl border-4 border-white ring-1 ring-slate-200" />
+					</div>
+
+					<h3 class="text-2xl font-bold text-[#28657c] uppercase tracking-tighter">Why Choose Our {city} Team for {page.name}?</h3>
+					<p>When you choose our locally owned team in {city}, Maryland, you are getting more than just a service—you are getting professional expertise backed by years of experience in the local community. We utilize industrial-grade equipment that out-performs anything available for rent, ensuring your {page.name} is handled safely and effectively.</p>
+					
+					<ul class="list-none space-y-4 font-bold text-slate-800">
+						<li class="flex items-center gap-2"><span class="text-[#28657c] text-xl">✅</span> Fast Response Times in {city} & All of Howard County</li>
+						<li class="flex items-center gap-2"><span class="text-[#28657c] text-xl">✅</span> Maryland Licensed & Insured Technicians</li>
+						<li class="flex items-center gap-2"><span class="text-[#28657c] text-xl">✅</span> Modern Industrial Equipment for Complete Service</li>
+						<li class="flex items-center gap-2"><span class="text-[#28657c] text-xl">✅</span> 100% Satisfaction Guaranteed Locally</li>
+					</ul>
+
+					<div class="bg-slate-50 p-8 rounded-lg border-l-8 border-[#28657c] mt-12">
+						<p class="italic text-slate-700 font-medium">"We understand the specific environmental and soil needs of Maryland properties. Whether it's a routine visit or a major emergency, we treat your property with the respect it deserves."</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Irving Mimic Sidebar Form -->
+			<div class="bg-slate-50 border-2 border-[#28657c] p-8 shadow-xl sticky top-8">
+				<h3 class="text-xl font-bold text-center text-[#28657c] uppercase mb-8 tracking-tighter">Quick {page.name} Quote</h3>
+				<form class="space-y-4">
+					<input type="text" placeholder="Your Name" class="w-full border border-slate-300 p-3 outline-[#28657c]" />
+					<input type="tel" placeholder="Phone Number" class="w-full border border-slate-300 p-3 outline-[#28657c]" />
+					<textarea placeholder={`Tell us about your ${page.name} needs...`} class="w-full border border-slate-300 p-3 h-32 outline-[#28657c]"></textarea>
+					<button class="w-full bg-[#28657c] text-white py-4 font-bold text-lg uppercase tracking-tighter hover:bg-[#1e4e5e] transition-colors shadow-lg">Submit Request</button>
+				</form>
+				<p class="text-[10px] text-slate-400 mt-4 text-center uppercase font-bold tracking-widest">Maryland's Trusted Pros</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer Keywords -->
+	<section class="py-12 bg-slate-50 border-t border-slate-100">
+		<div class="container mx-auto px-6 text-center text-xs text-slate-400 uppercase tracking-widest">
+			Serving {city} Maryland and Surrounding Howard, Baltimore, and Anne Arundel Counties.
+		</div>
+	</section>
+</Layout>

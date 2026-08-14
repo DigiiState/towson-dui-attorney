@@ -1,0 +1,194 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const phone = "866-891-9778";
+const city = "Towson";
+const niche = "DUI Defense";
+const webhookUrl = "https://hook.us2.make.com/223eq5l4jpl718k6r1yhbndcmq7d4iw2";
+
+// Niche-specific images mapping
+const images = {
+  "Septic Pumping": "https://sc02.alicdn.com/kf/A8239af84c8564874a21b4fcef95323a97.png", // Showing septic being pumped
+  "Tree Removal": "https://sc02.alicdn.com/kf/A0520d497b79e4c58b61a5f769cd41f14V.png",
+  "Water Damage": "https://sc02.alicdn.com/kf/A4fe71a4344644752848c5328899d28f41.png",
+  "DUI Defense": "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fer.png"
+};
+
+const serviceImage = images[niche] || images["Septic Pumping"];
+const truckImage = "https://sc02.alicdn.com/kf/A5dd3b365fb234f248e7bf687501827006.png"; // Unbranded professional truck
+---
+
+<Layout 
+	title={`${city} MD ${niche} | Locally Owned Maryland Septic Service Pros`}
+	phone={phone}
+	city={city}
+	niche={niche}
+>
+	<!-- 1. Hero -->
+	<section class="relative bg-slate-800 py-32 text-center text-white bg-cover bg-center" style={`background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=formaturl('${serviceImage}')fit=cropurl('${serviceImage}')w=1200url('${serviceImage}')q=80');`}>
+		<div class="container mx-auto px-6">
+			<h1 class="text-[50px] font-bold leading-tight mb-4 uppercase tracking-tighter">{niche} {city} MD</h1>
+			<h3 class="text-xl font-medium mb-10 opacity-90 uppercase tracking-widest">Locally Owned & Professionally Managed in Maryland</h3>
+			<a href={`tel:${phone.replace(/-/g, '')}`} class="inline-block bg-white text-[#28657c] font-bold text-2xl px-12 py-4 border-2 border-white hover:bg-transparent hover:text-white transition-all uppercase tracking-tighter">
+				Call Now {phone}
+			</a>
+		</div>
+	</section>
+
+	<!-- 2. Trust & Form Section (Exact Irving Split) -->
+	<section class="py-20">
+		<div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
+			<div>
+				<h2 class="text-3xl font-bold text-[#28657c] mb-10 uppercase tracking-tighter">3 Reasons To Trust Our {city} {niche} Team</h2>
+				<div class="space-y-10">
+					<div class="flex gap-6">
+						<div class="w-24 h-24 flex-shrink-0 bg-[#28657c]/10 rounded flex items-center justify-center text-4xl">🛡️</div>
+						<div>
+							<h4 class="text-xl font-bold text-[#28657c] mb-2 uppercase tracking-tighter">1. Prolong the Life of Your Septic System</h4>
+							<p class="text-slate-600">Professional {niche} in {city}, MD will extend the life of your entire infrastructure, protecting your home's value. In the Northern Baltimore County area, the soil composition requires regular maintenance to prevent system failure. It is highly recommended to have your septic tank professionally pumped at least every 2 to 3 years to ensure longevity.</p>
+						</div>
+					</div>
+					<div class="flex gap-6">
+						<div class="w-24 h-24 flex-shrink-0 bg-[#28657c]/10 rounded flex items-center justify-center text-4xl">🧪</div>
+						<div>
+							<h4 class="text-xl font-bold text-[#28657c] mb-2 uppercase tracking-tighter">2. Protect Maryland's Groundwater & Health</h4>
+							<p class="text-slate-600">Septic systems and drain fields trap hazardous pollutants. If your system is failing in {city}, it is essential to remove these pollutants immediately to maintain local Maryland groundwater quality and promote better environmental health for your family and neighbors. Our team uses industry-leading methods to ensure your home remains a safe environment.</p>
+						</div>
+					</div>
+					<div class="flex gap-6">
+						<div class="w-24 h-24 flex-shrink-0 bg-[#28657c]/10 rounded flex items-center justify-center text-4xl">🏡</div>
+						<div>
+							<h4 class="text-xl font-bold text-[#28657c] mb-2 uppercase tracking-tighter">3. Keep Your Property Healthy</h4>
+							<p class="text-slate-600">A professional {niche} service in {city} will keep your home or business plumbing looking and feeling fresh. We help bring aging systems back to life and prevent the back-breaking stress of a midnight sewage backup. We create a great first impression for your guests by ensuring your property is always fully functional and odor-free.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sidebar Form -->
+			<div class="bg-slate-50 border-2 border-[#28657c] p-10 shadow-xl">
+				<h3 class="text-xl font-bold text-center text-[#28657c] uppercase mb-8 tracking-tighter">Request a Free Estimate</h3>
+				<form id="leadForm" class="space-y-4">
+					<input type="text" name="name" required placeholder="Your Name" class="w-full border border-slate-300 p-3 outline-[#28657c]" />
+					<input type="tel" name="phone" required placeholder="Phone Number" class="w-full border border-slate-300 p-3 outline-[#28657c]" />
+					<input type="text" name="zip" required placeholder="Zip Code (e.g. 21131)" class="w-full border border-slate-300 p-3 outline-[#28657c]" />
+					<textarea name="service" required placeholder="Tell us what you need..." class="w-full border border-slate-300 p-3 h-32 outline-[#28657c]"></textarea>
+					<button type="submit" class="w-full bg-[#28657c] text-white py-4 font-bold text-lg uppercase tracking-tighter hover:bg-[#1e4e5e] transition-colors shadow-lg">Get Your Quote</button>
+				</form>
+				<p id="formStatus" class="text-[10px] text-slate-400 mt-4 text-center uppercase font-bold">100% Satisfaction Guaranteed locally in Maryland</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- 3. Long-Form SEO Content Blocks (The 1,000 Word Engine) -->
+	<section class="py-20 border-t border-slate-100 bg-white">
+		<div class="container mx-auto px-6 max-w-4xl">
+			<div class="text-center mb-20">
+				<h2 class="text-4xl font-bold text-[#28657c] uppercase tracking-tighter mb-4">Professional {niche} in {city}, MD</h2>
+				<p class="text-slate-500 uppercase tracking-widest text-sm">Locally Owned & Operated Maryland Septic Service</p>
+				<hr class="w-20 border-b-4 border-[#28657c] mx-auto mt-6" />
+			</div>
+
+			<div class="space-y-24">
+				<!-- Block 1 -->
+				<div>
+					<h3 class="text-2xl font-bold text-[#28657c] mb-6 uppercase tracking-tighter">Why Choose Our {city} Septic Pumping Pros?</h3>
+					<p class="text-slate-600 leading-relaxed mb-6">
+						When it comes to maintaining your home's infrastructure in {city}, Maryland, you cannot afford to take shortcuts. Unlike the big national franchises that use generic call centers, our {niche} team is based right here in {city}. We understand the specific soil types of Baltimore and Howard Counties, and we know exactly how the local climate affects your septic tank's performance. 
+					</p>
+					<p class="text-slate-600 leading-relaxed mb-6">
+						Our {city} {niche} services are designed to be thorough. We don't just "pump and run." Our technicians perform a visual inspection of the tank walls, baffles, and the overall integrity of the system during every visit. This "Abundant Clarity" in our process ensures that small issues are caught before they turn into $20,000 drain field disasters. Whether you are in the heart of {city} or the surrounding Maryland countryside, we are your go-to experts for reliable septic care.
+					</p>
+					<img src={truckImage} alt="Septic Truck" class="w-full h-80 object-cover rounded shadow-lg my-10" />
+					<hr class="border-slate-100" />
+				</div>
+
+				<!-- Block 2 -->
+				<div>
+					<h3 class="text-2xl font-bold text-[#28657c] mb-6 uppercase tracking-tighter">The Danger of DIY Septic Pumping</h3>
+					<p class="text-slate-600 leading-relaxed mb-6">
+						Many homeowners in {city} think they can handle basic septic maintenance themselves or hire a "cheap" guy with a rental machine. This is a massive risk. The professional high-extraction equipment we use for {niche} in {city}, MD is designed to remove the heavy sludge that settles at the bottom of your tank—something a basic pump simply cannot do.
+					</p>
+					<p class="text-slate-600 leading-relaxed mb-6">
+						Leaving this sludge behind leads to "carry-over," where solid waste enters your drain field and clogs the soil, leading to system failure. Our {city} {niche} experts have the training and industrial-grade machinery to ensure a complete extraction. Don't risk your property's safety with a rental; trust the {city} Maryland professionals who have the right tools for the job.
+					</p>
+					<hr class="border-slate-100" />
+				</div>
+
+				<!-- Block 3: The 4-Step Process -->
+				<div>
+					<h3 class="text-2xl font-bold text-[#28657c] mb-8 uppercase tracking-tighter">Our {city} MD {niche} Process</h3>
+					<div class="grid md:grid-cols-2 gap-8 mb-12">
+						<div class="p-6 bg-slate-50 rounded">
+							<div class="text-[#28657c] font-black text-2xl mb-2">01.</div>
+							<h5 class="font-bold uppercase mb-2">Locate & Inspect</h5>
+							<p class="text-sm text-slate-500">We locate your tank using specialized probes to minimize yard disturbance in your {city} property.</p>
+						</div>
+						<div class="p-6 bg-slate-50 rounded">
+							<div class="text-[#28657c] font-black text-2xl mb-2">02.</div>
+							<h5 class="font-bold uppercase mb-2">High-Power Extraction</h5>
+							<p class="text-sm text-slate-500">Our industrial-grade trucks perform a total extraction of all liquids and heavy solids from the tank.</p>
+						</div>
+						<div class="p-6 bg-slate-50 rounded">
+							<div class="text-[#28657c] font-black text-2xl mb-2">03.</div>
+							<h5 class="font-bold uppercase mb-2">Visual Audit</h5>
+							<p class="text-sm text-slate-500">We inspect the inlet and outlet baffles and check for any structural cracks or root intrusions.</p>
+						</div>
+						<div class="p-6 bg-slate-50 rounded">
+							<div class="text-[#28657c] font-black text-2xl mb-2">04.</div>
+							<h5 class="font-bold uppercase mb-2">Certification & Closure</h5>
+							<p class="text-sm text-slate-500">The tank is secured, the area is restored, and we provide you with a full maintenance report.</p>
+						</div>
+					</div>
+					<hr class="border-slate-100" />
+				</div>
+
+				<!-- Block 4: Hyper-Local Footer Keywords -->
+				<div>
+					<h3 class="text-2xl font-bold text-[#28657c] mb-6 uppercase tracking-tighter">Serving All Maryland Communities</h3>
+					<p class="text-slate-600 leading-relaxed mb-6">
+						Our {niche} team is proud to serve the following neighborhoods and cities across Maryland: 
+						<strong>Phoenix, Clarksville, Hunt Valley, Cockeysville, Timonium, Sparks, Monkton, Towson, Ellicott City, Columbia, Gibson Island, Annapolis, Severna Park, Arnold, and all of Howard and Baltimore Counties.</strong>
+					</p>
+					<p class="text-slate-600 leading-relaxed">
+						No matter where you are located in the {city} area, our emergency response team is just a phone call away. We are committed to providing {city} Maryland with the most reliable {niche} service available.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script define:vars={{ webhookUrl, city, niche }}>
+	const form = document.getElementById('leadForm');
+	const status = document.getElementById('formStatus');
+
+	form.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const formData = new FormData(form);
+		const data = Object.fromEntries(formData.entries());
+		
+		// Add metadata
+		data.source = window.location.hostname;
+		data.city = city;
+		data.niche = niche;
+
+		try {
+			status.textContent = "SENDING...";
+			const response = await fetch(webhookUrl, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data)
+			});
+
+			if (response.ok) {
+				status.textContent = "✅ REQUEST RECEIVED! WE WILL CALL YOU SHORTLY.";
+				form.reset();
+			} else {
+				throw new Error();
+			}
+		} catch (err) {
+			status.textContent = "❌ ERROR SENDING. PLEASE CALL US INSTEAD.";
+		}
+	});
+</script>

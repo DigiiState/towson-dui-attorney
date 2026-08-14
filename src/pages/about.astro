@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const phone = "866-891-9778";
+const city = "Phoenix";
+const niche = "Septic Pumping";
+
+const images = {
+  "Septic Pumping": "https://sc02.alicdn.com/kf/A51bdf3e42e8747b2bdd0fa8cee59f09db.png",
+  "Tree Removal": "https://sc02.alicdn.com/kf/A0520d497b79e4c58b61a5f769cd41f14V.png",
+  "Water Damage": "https://sc02.alicdn.com/kf/A4fe71a4344644752848c5328899d28f41.png",
+  "DUI Defense": "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fer.png"
+};
+
+const serviceImage = images[niche] || images["Septic Pumping"];
+---
+
+<Layout 
+	title={`About Us | Locally Owned ${city} ${niche} Service`}
+	phone={phone}
+	city={city}
+	niche={niche}
+>
+	<main class="max-w-6xl mx-auto px-6 py-20">
+		<h1 class="text-4xl font-black mb-12 border-b-4 border-red-600 inline-block uppercase tracking-tighter">About Our Company</h1>
+		
+		<div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+			<img src={serviceImage} alt="Our Team" class="w-full h-[400px] object-cover rounded shadow-2xl border-4 border-white ring-1 ring-slate-200" />
+			<div>
+				<h2 class="text-3xl font-bold text-[#28657c] mb-6 uppercase tracking-tighter">Your Local {city} Neighbors</h2>
+				<p class="text-xl leading-relaxed text-slate-600 mb-8">
+					Unlike the big national franchises, we are your neighbors. We live in Maryland, work in Maryland, and understand the unique environmental needs of our local community.
+				</p>
+				<p class="text-slate-600 leading-relaxed">
+					Our mission is simple: to provide the highest quality {niche} services in {city} at a fair, local price. We’ve built our reputation on fast response times and professional expertise.
+				</p>
+			</div>
+		</div>
+
+		<div class="grid md:grid-cols-2 gap-16 items-center">
+			<div class="order-2 md:order-1">
+				<h2 class="text-3xl font-bold text-[#28657c] mb-6 uppercase tracking-tighter">Commitment to Maryland</h2>
+				<p class="text-slate-600 leading-relaxed mb-6">
+					We specialize in the specific soil types and system requirements of Howard and Baltimore Counties. Whether it's a routine pump or a major emergency, we treat every property as if it were our own.
+				</p>
+				<ul class="space-y-4 font-bold text-[#28657c]">
+					<li>✅ Locally Owned & Operated</li>
+					<li>✅ Maryland Licensed Technicians</li>
+					<li>✅ 100% Satisfaction Guaranteed</li>
+				</ul>
+			</div>
+			<img src="https://sc02.alicdn.com/kf/A978b7ae5087a47328dd17b6b46597fdet.png" alt="Service Equipment" class="w-full h-[400px] object-cover rounded shadow-2xl order-1 md:order-2" />
+		</div>
+	</main>
+</Layout>
