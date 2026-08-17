@@ -2,18 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 
 export function getStaticPaths() {
-  // This will be programmatically populated per site
   return [
-    { params: { neighborhood: 'clarksville' }, props: { name: 'Clarksville' } },
-    { params: { neighborhood: 'dayton' }, props: { name: 'Dayton' } },
-    { params: { neighborhood: 'monkton' }, props: { name: 'Monkton' } },
-    { params: { neighborhood: 'sparks' }, props: { name: 'Sparks' } },
-    { params: { neighborhood: 'hunt-valley' }, props: { name: 'Hunt Valley' } },
-    { params: { neighborhood: 'gibson-island' }, props: { name: 'Gibson Island' } },
-    { params: { neighborhood: 'annapolis' }, props: { name: 'Annapolis' } },
-    { params: { neighborhood: 'eastport' }, props: { name: 'Eastport' } },
-    { params: { neighborhood: 'parole' }, props: { name: 'Parole' } },
-    { params: { neighborhood: 'severna-park' }, props: { name: 'Severna Park' } }
+    { params: { neighborhood: 'monkton' }, props: { name: 'Monkton' } }, { params: { neighborhood: 'sparks' }, props: { name: 'Sparks' } }, { params: { neighborhood: 'cockeysville' }, props: { name: 'Cockeysville' } }, { params: { neighborhood: 'hunt-valley' }, props: { name: 'Hunt Valley' } }, { params: { neighborhood: 'butler' }, props: { name: 'Butler' } }, { params: { neighborhood: 'hereford' }, props: { name: 'Hereford' } }, { params: { neighborhood: 'glencoe' }, props: { name: 'Glencoe' } }, { params: { neighborhood: 'parkton' }, props: { name: 'Parkton' } }, { params: { neighborhood: 'freeland' }, props: { name: 'Freeland' } }, { params: { neighborhood: 'jacksonville' }, props: { name: 'Jacksonville' } }, { params: { neighborhood: 'sweet-air' }, props: { name: 'Sweet Air' } }, { params: { neighborhood: 'baldwin' }, props: { name: 'Baldwin' } }, { params: { neighborhood: 'long-green' }, props: { name: 'Long Green' } }, { params: { neighborhood: 'hydes' }, props: { name: 'Hydes' } }, { params: { neighborhood: 'glen-arm' }, props: { name: 'Glen Arm' } }, { params: { neighborhood: 'clarksville' }, props: { name: 'Clarksville' } }, { params: { neighborhood: 'dayton' }, props: { name: 'Dayton' } }, { params: { neighborhood: 'glenelg' }, props: { name: 'Glenelg' } }, { params: { neighborhood: 'glenwood' }, props: { name: 'Glenwood' } }, { params: { neighborhood: 'west-friendship' }, props: { name: 'West Friendship' } }, { params: { neighborhood: 'highland' }, props: { name: 'Highland' } }, { params: { neighborhood: 'fulton' }, props: { name: 'Fulton' } }, { params: { neighborhood: 'scaggsville' }, props: { name: 'Scaggsville' } }, { params: { neighborhood: 'maple-lawn' }, props: { name: 'Maple Lawn' } }, { params: { neighborhood: 'sykesville' }, props: { name: 'Sykesville' } }, { params: { neighborhood: 'marriottsville' }, props: { name: 'Marriottsville' } }, { params: { neighborhood: 'woodstock' }, props: { name: 'Woodstock' } }, { params: { neighborhood: 'pasadena' }, props: { name: 'Pasadena' } }, { params: { neighborhood: 'severna-park' }, props: { name: 'Severna Park' } }, { params: { neighborhood: 'arnold' }, props: { name: 'Arnold' } }, { params: { neighborhood: 'cape-st-claire' }, props: { name: 'Cape St. Claire' } }, { params: { neighborhood: 'lake-shore' }, props: { name: 'Lake Shore' } }, { params: { neighborhood: 'riviera-beach' }, props: { name: 'Riviera Beach' } }, { params: { neighborhood: 'green-haven' }, props: { name: 'Green Haven' } }, { params: { neighborhood: 'chelsea-beach' }, props: { name: 'Chelsea Beach' } }, { params: { neighborhood: 'pinehurst' }, props: { name: 'Pinehurst' } }, { params: { neighborhood: 'eastport' }, props: { name: 'Eastport' } }, { params: { neighborhood: 'parole' }, props: { name: 'Parole' } }, { params: { neighborhood: 'hillsmere-shores' }, props: { name: 'Hillsmere Shores' } }, { params: { neighborhood: 'highland-beach' }, props: { name: 'Highland Beach' } }, { params: { neighborhood: 'riva' }, props: { name: 'Riva' } }, { params: { neighborhood: 'edgewater' }, props: { name: 'Edgewater' } }, { params: { neighborhood: 'crownsville' }, props: { name: 'Crownsville' } }, { params: { neighborhood: 'mayo' }, props: { name: 'Mayo' } }, { params: { neighborhood: 'davidsonville' }, props: { name: 'Davidsonville' } }, 
   ];
 }
 
@@ -21,8 +11,8 @@ const { neighborhood } = Astro.params;
 const { name } = Astro.props;
 
 const phone = "866-891-9778";
-const city = "Phoenix"; // Placeholder
-const niche = "DUI Defense"; // Placeholder
+const city = "Phoenix"; 
+const niche = "DUI Defense";
 const serviceImage = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=formatconst serviceImage = "https://sc02.alicdn.com/kf/A8239af84c8564874a21b4fcef95323a97.png";fit=cropconst serviceImage = "https://sc02.alicdn.com/kf/A8239af84c8564874a21b4fcef95323a97.png";w=1200const serviceImage = "https://sc02.alicdn.com/kf/A8239af84c8564874a21b4fcef95323a97.png";q=80";
 ---
 
@@ -34,7 +24,7 @@ const serviceImage = "https://images.unsplash.com/photo-1589829545856-d10d557cf9
 >
 	<main class="bg-white text-slate-800 py-24">
 		<div class="container mx-auto px-6 max-w-4xl">
-			<h1 class="text-5xl font-black mb-12 border-b-8 border-blue-600 inline-block uppercase tracking-tighter">
+			<h1 class="text-5xl md:text-7xl font-black mb-12 border-b-8 border-blue-600 inline-block uppercase tracking-tighter">
 				{niche.toUpperCase()} IN {name.toUpperCase()} MD
 			</h1>
 
@@ -49,16 +39,12 @@ const serviceImage = "https://images.unsplash.com/photo-1589829545856-d10d557cf9
 				<p>
 					In the {name} area, homeowners and businesses require a {niche} team that understands the local Maryland soil types and environmental regulations. Unlike national franchises, we are based right here in the community, allowing us to offer faster response times and a deeper understanding of the specific challenges facing properties in {name}, Maryland.
 				</p>
-				<p>
-					Whether you are located near the heart of {name} or in the surrounding residential enclaves, our industrial-grade equipment and licensed technicians are ready to handle your {niche} needs with "Abundant Clarity." We provide a full visual audit and digital report after every visit to ensure your system's long-term health.
-				</p>
 
 				<div class="bg-slate-50 p-12 rounded-3xl border-2 border-[#28657c] mt-20 text-center">
 					<h3 class="text-2xl font-black text-[#28657c] mb-6 uppercase">Ready to get started in {name}?</h3>
 					<a href={`tel:${phone.replace(/-/g, '')}`} class="inline-block bg-[#28657c] text-white px-12 py-5 rounded-xl font-black text-xl uppercase tracking-widest shadow-xl hover:bg-[#1e4e5e] transition-all">
 						CALL NOW {phone}
 					</a>
-					<p class="text-[10px] text-slate-400 mt-6 uppercase font-bold tracking-[0.2em]">Serving {name} Zip Code area and surrounding Maryland neighborhoods</p>
 				</div>
 			</div>
 
