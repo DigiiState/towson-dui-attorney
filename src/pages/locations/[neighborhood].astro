@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  // This will be programmatically populated per site
+  return [
+    { params: { neighborhood: 'clarksville' }, props: { name: 'Clarksville' } },
+    { params: { neighborhood: 'dayton' }, props: { name: 'Dayton' } },
+    { params: { neighborhood: 'monkton' }, props: { name: 'Monkton' } },
+    { params: { neighborhood: 'sparks' }, props: { name: 'Sparks' } },
+    { params: { neighborhood: 'hunt-valley' }, props: { name: 'Hunt Valley' } },
+    { params: { neighborhood: 'gibson-island' }, props: { name: 'Gibson Island' } },
+    { params: { neighborhood: 'annapolis' }, props: { name: 'Annapolis' } },
+    { params: { neighborhood: 'eastport' }, props: { name: 'Eastport' } },
+    { params: { neighborhood: 'parole' }, props: { name: 'Parole' } },
+    { params: { neighborhood: 'severna-park' }, props: { name: 'Severna Park' } }
+  ];
+}
+
+const { neighborhood } = Astro.params;
+const { name } = Astro.props;
+
+const phone = "866-891-9778";
+const city = "Phoenix"; // Placeholder
+const niche = "DUI Defense"; // Placeholder
+const serviceImage = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=formatconst serviceImage = "https://sc02.alicdn.com/kf/A8239af84c8564874a21b4fcef95323a97.png";fit=cropconst serviceImage = "https://sc02.alicdn.com/kf/A8239af84c8564874a21b4fcef95323a97.png";w=1200const serviceImage = "https://sc02.alicdn.com/kf/A8239af84c8564874a21b4fcef95323a97.png";q=80";
+---
+
+<Layout 
+	title={`${niche.toUpperCase()} IN ${name.toUpperCase()}, MD | Professional Local Service`}
+	phone={phone}
+	city={city}
+	niche={niche}
+>
+	<main class="bg-white text-slate-800 py-24">
+		<div class="container mx-auto px-6 max-w-4xl">
+			<h1 class="text-5xl font-black mb-12 border-b-8 border-blue-600 inline-block uppercase tracking-tighter">
+				{niche.toUpperCase()} IN {name.toUpperCase()} MD
+			</h1>
+
+			<div class="prose prose-lg prose-slate max-w-none">
+				<p class="text-2xl leading-relaxed mb-10 font-bold text-slate-900">
+					Looking for reliable {niche} in {name}, MD? Our locally owned team provides rapid-response professional maintenance and emergency services for the entire {name} neighborhood.
+				</p>
+				
+				<img src={serviceImage} alt={`${niche} in ${name} Maryland`} class="w-full h-[450px] object-cover rounded shadow-2xl my-16 border-4 border-white ring-1 ring-slate-200" />
+
+				<h2 class="text-3xl font-black text-[#28657c] uppercase tracking-tighter mb-6">Expert {niche} for {name} Neighbors</h2>
+				<p>
+					In the {name} area, homeowners and businesses require a {niche} team that understands the local Maryland soil types and environmental regulations. Unlike national franchises, we are based right here in the community, allowing us to offer faster response times and a deeper understanding of the specific challenges facing properties in {name}, Maryland.
+				</p>
+				<p>
+					Whether you are located near the heart of {name} or in the surrounding residential enclaves, our industrial-grade equipment and licensed technicians are ready to handle your {niche} needs with "Abundant Clarity." We provide a full visual audit and digital report after every visit to ensure your system's long-term health.
+				</p>
+
+				<div class="bg-slate-50 p-12 rounded-3xl border-2 border-[#28657c] mt-20 text-center">
+					<h3 class="text-2xl font-black text-[#28657c] mb-6 uppercase">Ready to get started in {name}?</h3>
+					<a href={`tel:${phone.replace(/-/g, '')}`} class="inline-block bg-[#28657c] text-white px-12 py-5 rounded-xl font-black text-xl uppercase tracking-widest shadow-xl hover:bg-[#1e4e5e] transition-all">
+						CALL NOW {phone}
+					</a>
+					<p class="text-[10px] text-slate-400 mt-6 uppercase font-bold tracking-[0.2em]">Serving {name} Zip Code area and surrounding Maryland neighborhoods</p>
+				</div>
+			</div>
+
+			<div class="mt-32 pt-10 border-t border-slate-100 flex justify-center">
+				<a href="/" class="text-xs font-black uppercase tracking-[0.4em] text-blue-600 hover:underline">
+					&larr; Return to {city} {niche} Hub
+				</a>
+			</div>
+		</div>
+	</main>
+</Layout>
