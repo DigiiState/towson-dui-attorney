@@ -73,6 +73,13 @@ const currentServices = servicesByNiche[niche] || servicesByNiche["Septic Pumpin
 			.dropdown-content a:hover { background-color: #f8fafc; }
 			.dropdown:hover .dropdown-content { display: block; }
 		</style>
+			<link rel="canonical" href={\`https://www.towsonduiattorney.com${Astro.url.pathname}\` } />
+	
+    <script is:inline>
+      if (window.location.hostname !== "www.towsonduiattorney.com" && !window.location.hostname.endsWith(".pages.dev")) {
+        window.location.replace("https://www.towsonduiattorney.com" + window.location.pathname + window.location.search);
+      }
+    </script>
 	</head>
 	<body class="bg-white text-slate-800">
 		<!-- Irving Mimic Header -->
