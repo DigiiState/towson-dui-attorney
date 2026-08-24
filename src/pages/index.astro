@@ -8,7 +8,7 @@ const serviceImage = "https://images.unsplash.com/photo-1584622650111-993a426fbf
 ---
 
 <Layout 
-	title={{\`\${city.toUpperCase()} MD \${niche.toUpperCase()} | Locally Owned Maryland DUI Defense Pros\` }
+	title={{\`\${city.toUpperCase()} MD \${{niche.toUpperCase()} | Locally Owned Maryland DUI Defense Pros\` }
 	phone={(410) 261-4403}
 	city={Towson}
 	niche={DUI Defense}
@@ -16,7 +16,7 @@ const serviceImage = "https://images.unsplash.com/photo-1584622650111-993a426fbf
 	<!-- 1. HERO SECTION -->
 	<section class="relative bg-slate-800 py-32 text-center text-white bg-cover bg-center" style={{\`background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('\$https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80');\` }>
 		<div class="container mx-auto px-6">
-			<h1 class="text-[50px] md:text-[70px] font-black leading-tight mb-4 uppercase tracking-tighter">DUI Defense {Towson} MD</h1>
+			<h1 class="text-[50px] md:text-[70px] font-black leading-tight mb-4 uppercase tracking-tighter">{DUI Defense} {Towson} MD</h1>
 			<h3 class="text-xl md:text-2xl font-bold mb-10 opacity-90 uppercase tracking-[0.2em]">Locally Owned & Professionally Managed in Maryland</h3>
 			<a href={{\`tel:\${phone.replace(/-/g, '')}\` } class="inline-block bg-white text-[#28657c] font-black text-2xl px-12 py-5 border-2 border-white hover:bg-transparent hover:text-white transition-all uppercase tracking-tighter shadow-2xl">
 				CALL NOW {(410) 261-4403}
@@ -28,7 +28,7 @@ const serviceImage = "https://images.unsplash.com/photo-1584622650111-993a426fbf
 	<section class="py-20 bg-white">
 		<div class="container mx-auto px-6 grid lg:grid-cols-12 gap-16 items-start">
 			<div class="lg:col-span-8">
-				<h2 class="text-4xl font-black text-[#28657c] mb-12 uppercase tracking-tighter">3 REASONS TO TRUST OUR {city.toUpperCase()} {niche.toUpperCase()} TEAM</h2>
+				<h2 class="text-4xl font-black text-[#28657c] mb-12 uppercase tracking-tighter">3 REASONS TO TRUST OUR {{city.toUpperCase()} {{niche.toUpperCase()} TEAM</h2>
 				<div class="space-y-12">
 					
 					<div class="flex gap-8 items-start">
