@@ -22,7 +22,7 @@ const servicesByNiche: Record<string, {name: string, slug: string}[]> = {
     { name: "Stump Grinding", slug: "stump-grinding" },
     { name: "Storm Damage Care", slug: "storm-damage" }
   ],
-  "Water Damage": [
+  "Water Damage Restoration": [
     { name: "Water Extraction", slug: "water-extraction" },
     { name: "Mold Remediation", slug: "mold-remediation" },
     { name: "Basement Waterproofing", slug: "waterproofing" },
@@ -33,6 +33,16 @@ const servicesByNiche: Record<string, {name: string, slug: string}[]> = {
     { name: "MVA License Hearings", slug: "mva-hearings" },
     { name: "Traffic Ticket Defense", slug: "traffic-defense" },
     { name: "Criminal Defense", slug: "criminal-defense" }
+  ],
+  "Traffic Defense": [
+    { name: "Speeding Ticket Defense", slug: "speeding-defense" },
+    { name: "DUI Defense", slug: "dui-defense" },
+    { name: "Points Mitigation", slug: "point-mitigation" }
+  ],
+  "Roofing": [
+    { name: "Roof Replacement", slug: "roof-replacement" },
+    { name: "Leak Repair", slug: "leak-repair" },
+    { name: "Storm Damage", slug: "storm-damage" }
   ]
 };
 
@@ -73,16 +83,8 @@ const currentServices = servicesByNiche[niche] || servicesByNiche["Septic Pumpin
 			.dropdown-content a:hover { background-color: #f8fafc; }
 			.dropdown:hover .dropdown-content { display: block; }
 		</style>
-			<link rel="canonical" href={\`https://www.towsonduiattorney.com${Astro.url.pathname}\` } />
-	
-    <script is:inline>
-      if (window.location.hostname !== "www.towsonduiattorney.com" && !window.location.hostname.endsWith(".pages.dev")) {
-        window.location.replace("https://www.towsonduiattorney.com" + window.location.pathname + window.location.search);
-      }
-    </script>
 	</head>
 	<body class="bg-white text-slate-800">
-		<!-- Irving Mimic Header -->
 		<header class="bg-white py-6">
 			<div class="container flex flex-col md:flex-row justify-between items-center gap-4">
 				<div class="text-3xl font-bold text-[#28657c] tracking-tight">
@@ -111,7 +113,6 @@ const currentServices = servicesByNiche[niche] || servicesByNiche["Septic Pumpin
 
 		<slot />
 
-		<!-- Irving Mimic Footer -->
 		<footer class="bg-slate-50 border-t border-slate-200 py-20 mt-20">
 			<div class="container">
 				<div class="grid md:grid-cols-3 gap-12">
