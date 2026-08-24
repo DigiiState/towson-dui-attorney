@@ -5,32 +5,32 @@ const phone = "866-891-9778";
 const city = "Towson";
 const niche = "DUI Defense";
 const serviceImage = "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80";
-const truckImage = "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fer.png";
 ---
 
 <Layout 
-	title={`${city.toUpperCase()} MD ${niche.toUpperCase()} | Locally Owned Maryland DUI Defense Pros`}
-	phone={phone}
-	city={city}
-	niche={niche}
+	title={{\`\${{{city.toUpperCase()}}} MD \${{{niche.toUpperCase()}}} | Locally Owned Maryland DUI Defense Pros\`}}
+	phone={866-891-9778}
+	city={Towson}
+	niche={DUI Defense}
 >
-	<!-- 1. HERO SECTION (Golden Template Standard) -->
-	<section class="relative bg-slate-800 py-32 text-center text-white bg-cover bg-center" style={`background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${serviceImage}');`}>
+	<!-- 1. HERO SECTION -->
+	<section class="relative bg-slate-800 py-32 text-center text-white bg-cover bg-center" style={{\`background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('\${https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80}');\`}}>
 		<div class="container mx-auto px-6">
-			<h1 class="text-[50px] md:text-[70px] font-black leading-tight mb-4 uppercase tracking-tighter">{niche} {city} MD</h1>
+			<h1 class="text-[50px] md:text-[70px] font-black leading-tight mb-4 uppercase tracking-tighter">{DUI Defense} {Towson} MD</h1>
 			<h3 class="text-xl md:text-2xl font-bold mb-10 opacity-90 uppercase tracking-[0.2em]">Locally Owned & Professionally Managed in Maryland</h3>
-			<a href={`tel:${phone.replace(/-/g, '')}`} class="inline-block bg-white text-[#28657c] font-black text-2xl px-12 py-5 border-2 border-white hover:bg-transparent hover:text-white transition-all uppercase tracking-tighter shadow-2xl">
-				CALL NOW {phone}
+			<a href={{\`tel:\${{phone.replace(/-/g, '')}}\` chunks}} class="inline-block bg-white text-[#28657c] font-black text-2xl px-12 py-5 border-2 border-white hover:bg-transparent hover:text-white transition-all uppercase tracking-tighter shadow-2xl">
+				CALL NOW {866-891-9778}
 			</a>
 		</div>
 	</section>
 
-	<!-- 2. TRUST PILLARS & LEAD CAPTURE (70/30 Split) -->
+	<!-- 2. TRUST PILLARS & LEAD CAPTURE -->
 	<section class="py-20 bg-white">
 		<div class="container mx-auto px-6 grid lg:grid-cols-12 gap-16 items-start">
 			<div class="lg:col-span-8">
-				<h2 class="text-4xl font-black text-[#28657c] mb-12 uppercase tracking-tighter">3 REASONS TO TRUST OUR {city.toUpperCase()} {niche.toUpperCase()} TEAM</h2>
+				<h2 class="text-4xl font-black text-[#28657c] mb-12 uppercase tracking-tighter">3 REASONS TO TRUST OUR {{{city.toUpperCase()}}} {{{niche.toUpperCase()}}} TEAM</h2>
 				<div class="space-y-12">
+					
 					<div class="flex gap-8 items-start">
 						<div class="w-20 h-20 flex-shrink-0 bg-[#28657c]/5 rounded-2xl flex items-center justify-center text-4xl shadow-sm">⚖️</div>
 						<div>
@@ -68,20 +68,19 @@ const truckImage = "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fe
 					<p id="formStatus" class="text-[11px] text-slate-400 mt-6 text-center uppercase font-black tracking-widest">100% SATISFACTION GUARANTEED</p>
 				</div>
 			</div>
-
-			</div>
 		</div>
 	</section>
 
-	<!-- 3. THE 4-STEP PROCESS (Golden Template Standard) -->
+	<!-- 3. THE 4-STEP PROCESS -->
 	<section class="py-24 bg-slate-50 border-t border-slate-100">
 		<div class="container mx-auto px-6 max-w-5xl">
 			<div class="text-center mb-20">
-				<h2 class="text-5xl font-[900] text-[#28657c] uppercase tracking-tighter mb-4">OUR {city.toUpperCase()} MD {niche.toUpperCase()} PROCESS</h2>
+				<h2 class="text-5xl font-[900] text-[#28657c] uppercase tracking-tighter mb-4">OUR {{{city.toUpperCase()}}} MD {{{niche.toUpperCase()}}} PROCESS</h2>
 				<hr class="w-24 border-b-8 border-[#28657c] mx-auto mt-6" />
 			</div>
 
 			<div class="grid md:grid-cols-4 gap-4">
+				
 				<div class="bg-white p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-[#28657c] transition-all">
 					<div class="text-6xl font-black text-slate-100 absolute -right-2 -top-2 group-hover:text-[#28657c]/10 transition-colors">01</div>
 					<h5 class="font-black text-[#28657c] uppercase mb-4 relative z-10">CASE AUDIT</h5>
@@ -106,72 +105,21 @@ const truckImage = "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fe
 		</div>
 	</section>
 
-	<!-- 4. INDUSTRIAL AUTHORITY TEXT (Abundant Clarity Standard: 1,100+ Words) -->
-	<section class="py-24 bg-white">
+	<!-- 4. AUTHORITY SECTION -->
+	<section class="py-24 bg-white border-t border-slate-100">
 		<div class="container mx-auto px-6 max-w-4xl">
 			<div class="prose prose-slate prose-lg max-w-none">
-				<h2 class="text-4xl font-black text-[#28657c] uppercase tracking-tighter mb-8">Professional DUI Defense Excellence in Towson Maryland</h2>
+				<h2 class="text-4xl font-black text-[#28657c] uppercase tracking-tighter mb-8">Professional {DUI Defense} Excellence in {Towson} Maryland</h2>
 				<p>
-					When it comes to maintaining your property's infrastructure in Towson, Maryland, you cannot afford to take shortcuts. Unlike the big national franchises that use generic call centers, our DUI Defense team is based right here in Towson. We understand the specific soil and climate conditions of Maryland, and we know exactly how they affect your property.
+					When it comes to maintaining your property's infrastructure in {Towson}, Maryland, you cannot afford to take shortcuts. Unlike the big national franchises that use generic call centers, our {DUI Defense} team is based right here in {Towson}. We understand the specific local conditions of Maryland and exactly how they affect your property.
 				</p>
-
-                <h3 class="text-3xl font-black text-[#28657c] uppercase tracking-tighter mb-6">Protecting Your Freedom & Rights in Towson</h3>
-				<p>
-					A DUI or DWI charge in Towson, MD is a high-stakes legal matter that requires an aggressive, technical defense. Maryland's drunk driving laws are among the strictest in the nation, and the consequences extend far beyond a simple fine. From mandatory ignition interlock requirements to potential jail time and permanent criminal records, your future depends on the quality of your counsel in Towson.
-				</p>
-                <p>
-                    Our "Abundant Clarity" defense strategy involves a deep-dive audit of the prosecution's evidence. We examine the calibration logs of the breathalyzer equipment, the training records of the arresting officer in Towson, and the specific medical or environmental factors that may have led to a "false positive" during field sobriety testing.
-                </p>
-
-                <h3 class="text-3xl font-black text-[#28657c] uppercase tracking-tighter mb-6">Navigating the Maryland MVA Maze</h3>
-                <p>
-                    In addition to the criminal court case, you face an administrative challenge from the Maryland MVA. You have a very narrow 10-day window to request a hearing to prevent the automatic suspension of your driver's license. Our Towson legal team handles both the court and MVA aspects of your case, ensuring that you don't miss critical deadlines that could cost you your ability to commute to work and manage your life in Maryland.
-                </p>
-
-                <div class="bg-[#28657c]/5 p-12 rounded-3xl my-16 border-l-8 border-[#28657c]">
-                    <h4 class="text-2xl font-black text-[#28657c] uppercase mb-6">Towson DUI Legal Protocol</h4>
-                    <ul class="space-y-4 font-bold text-slate-700">
-                        <li>[ ] RIGHT TO COUNSEL: Do not provide any statements or "confessions" to Towson police without your lawyer present.</li>
-                        <li>[ ] PRESERVE EVIDENCE: Save all receipts, dashcam footage, or witness contact info from the night of the stop.</li>
-                        <li>[ ] MVA DEADLINE: You must act within 10 days to protect your Maryland driving privileges.</li>
-                        <li>[ ] CASE AUDIT: We will perform a 50-point procedural audit of your stop and arrest in Towson.</li>
-                    </ul>
+                
+                <div class="bg-red-50 border-2 border-red-200 p-8 rounded-2xl my-12">
+                    <h5 class="text-red-800 font-black uppercase mb-4">Attorney Advertising & Disclaimers</h5>
+                    <p class="text-red-700 text-xs leading-relaxed mb-0">
+                        This website is a legal marketing property operated by DigiiState. The information provided is not legal advice and does not create an attorney-client relationship. Lead inquiries are routed to a licensed Maryland attorney who is the primary service provider for this territory. Results are not guaranteed and past performance does not indicate future outcomes.
+                    </p>
                 </div>
-
-                <h3 class="text-3xl font-black text-[#28657c] uppercase tracking-tighter mb-6">Challenging the Technical Accuracy of BAC Results</h3>
-                <p>
-                    Many people believe that a high BAC reading makes their case "unwinnable." This is a misconception. In Towson, MD, we have successfully challenged chemical test results based on improper administration, biological interference (such as GERD or diabetes), and chain-of-custody errors. We fight to have evidence suppressed when your constitutional rights have been violated during the stop in Maryland.
-                </p>
-
-                <h2 class="text-4xl font-black text-[#28657c] uppercase tracking-tighter mt-24 mb-12">Frequently Asked Questions</h2>
-                <div class="space-y-10">
-                    <div>
-                        <h4 class="text-xl font-black text-slate-900 uppercase mb-2">Will I have to go to jail for a DUI in Towson, MD?</h4>
-                        <p class="text-slate-600">While jail is a possibility for even first offenses in Maryland, our goal is to secure alternative sentencing, probation, or case dismissal for our Towson clients whenever possible.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-black text-slate-900 uppercase mb-2">Can a DUI conviction be expunged in Maryland?</h4>
-                        <p class="text-slate-600">Currently, DUI and DWI convictions are not eligible for expungement in MD. This makes it critical to secure a "Probation Before Judgment" (PBJ) or a complete acquittal in Towson courts.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-black text-slate-900 uppercase mb-2">How much does a DUI lawyer cost in Towson?</h4>
-                        <p class="text-slate-600">We offer transparent, flat-fee arrangements for Towson residents, ensuring you have the best possible defense without hidden costs during this stressful time in Maryland.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-black text-slate-900 uppercase mb-2">What is the difference between DUI and DWI in MD?</h4>
-                        <p class="text-slate-600">DUI (Driving Under the Influence) is the more serious charge, typically involving a BAC of .08 or higher. DWI (Driving While Impaired) usually involves a BAC of .07 and carries lighter—but still significant—penalties in Towson.</p>
-                    </div>
-                </div>
-    
-
-                <h3 class="text-3xl font-black text-[#28657c] uppercase tracking-tighter mb-6">Maryland Community Stewardship</h3>
-                <p>
-                    As a locally managed service in Towson, MD, we are more than just a business; we are part of the Maryland community. We prioritize hiring local technicians who understand the specific challenges of our region, from the humidity of the Chesapeake to the rocky soils of Northern Baltimore County. Our goal is to provide sustainable, reliable infrastructure maintenance that keeps Maryland properties safe and profitable for decades to come.
-                </p>
-                <p>
-                    By choosing our professional services, you are supporting a network dedicated to "Abundant Clarity" in the service industry. We believe that every property owner in Towson deserves a transparent, data-driven approach to maintenance. Whether it is protecting your home's foundation or ensuring the safety of your trees, we are here to serve our Maryland neighbors with excellence and integrity.
-                </p>
-    
 			</div>
 		</div>
 	</section>
@@ -185,14 +133,6 @@ const truckImage = "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fe
 			</div>
 		</div>
 	</section>
-
-                <div class="bg-red-50 border-2 border-red-200 p-8 rounded-2xl my-12">
-                    <h5 class="text-red-800 font-black uppercase mb-4">Attorney Advertising & Disclaimers</h5>
-                    <p class="text-red-700 text-xs leading-relaxed mb-0">
-                        This website is a legal marketing property operated by DigiiState. The information provided is not legal advice and does not create an attorney-client relationship. Lead inquiries are routed to a licensed Maryland attorney who is the primary service provider for this territory. Results are not guaranteed and past performance does not indicate future outcomes.
-                    </p>
-                </div>
-        
 </Layout>
 
 <script is:inline>
@@ -200,7 +140,7 @@ const truckImage = "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fe
 	const status = document.getElementById('formStatus');
 	const webhookUrl = "https://wandering-king-6c05.empty-math-6c0f.workers.dev";
 
-	form?.addEventListener('submit', async (e) => {
+	form?.addEventListener('submit', async (e) => {{
 		e.preventDefault();
 		const formData = new FormData(form);
 		const data = Object.fromEntries(formData.entries());
@@ -208,22 +148,22 @@ const truckImage = "https://sc02.alicdn.com/kf/Ab2dfcdf361bf428d8a0bcbc89def94fe
 		data.source = window.location.hostname;
 		data.timestamp = new Date().toISOString();
 
-		try {
+		try {{
 			status.textContent = "SENDING REQUEST...";
-			const response = await fetch(webhookUrl, {
+			const response = await fetch(webhookUrl, {{
 				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
+				headers: {{ 'Content-Type': 'application/json' }},
 				body: JSON.stringify(data)
-			});
+			}});
 
-			if (response.ok) {
+			if (response.ok) {{
 				status.textContent = "✅ SUCCESS! WE WILL CALL YOU SHORTLY.";
 				form.reset();
-			} else {
+			}} else {{
 				throw new Error();
-			}
-		} catch (err) {
+			}}
+		}} catch (err) {{
 			status.textContent = "❌ ERROR SENDING. PLEASE CALL US NOW.";
-		}
-	});
+		}}
+	}});
 </script>
