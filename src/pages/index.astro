@@ -8,23 +8,23 @@ const serviceImage = "https://images.unsplash.com/photo-1584622650111-993a426fbf
 ---
 
 <Layout 
-	title={{\`\${city.toUpperCase()} MD \${niche.toUpperCase()} | Locally Owned Maryland DUI Defense Pros\`}}
+	title={\`\${city.toUpperCase()} MD \${niche.toUpperCase()} | Locally Owned Maryland DUI Defense Pros\` }
 	phone={phone}
 	city={city}
 	niche={niche}
 >
 	<!-- 1. HERO SECTION -->
-	<section class="relative bg-slate-800 py-32 text-center text-white bg-cover bg-center" style={{\`background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('\${https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80}');\`}}>
+	<section class="relative bg-slate-800 py-32 text-center text-white bg-cover bg-center" style={\`background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('\${serviceImage}');\` }>
 		<div class="container mx-auto px-6">
-			<h1 class="text-[50px] md:text-[70px] font-black leading-tight mb-4 uppercase tracking-tighter">{DUI Defense} {Towson} MD</h1>
+			<h1 class="text-[50px] md:text-[70px] font-black leading-tight mb-4 uppercase tracking-tighter">{niche} {city} MD</h1>
 			<h3 class="text-xl md:text-2xl font-bold mb-10 opacity-90 uppercase tracking-[0.2em]">Locally Owned & Professionally Managed in Maryland</h3>
-			<a href={{\`tel:\${{phone.replace(/-/g, '')}}\` chunks}} class="inline-block bg-white text-[#28657c] font-black text-2xl px-12 py-5 border-2 border-white hover:bg-transparent hover:text-white transition-all uppercase tracking-tighter shadow-2xl">
-				CALL NOW {866-891-9778}
+			<a href={\`tel:\${phone.replace(/-/g, '')}\` } class="inline-block bg-white text-[#28657c] font-black text-2xl px-12 py-5 border-2 border-white hover:bg-transparent hover:text-white transition-all uppercase tracking-tighter shadow-2xl">
+				CALL NOW {phone}
 			</a>
 		</div>
 	</section>
 
-	<!-- 2. TRUST PILLARS & LEAD CAPTURE -->
+	<!-- 2. TRUST PILLARS -->
 	<section class="py-20 bg-white">
 		<div class="container mx-auto px-6 grid lg:grid-cols-12 gap-16 items-start">
 			<div class="lg:col-span-8">
@@ -70,69 +70,6 @@ const serviceImage = "https://images.unsplash.com/photo-1584622650111-993a426fbf
 			</div>
 		</div>
 	</section>
-
-	<!-- 3. THE 4-STEP PROCESS -->
-	<section class="py-24 bg-slate-50 border-t border-slate-100">
-		<div class="container mx-auto px-6 max-w-5xl">
-			<div class="text-center mb-20">
-				<h2 class="text-5xl font-[900] text-[#28657c] uppercase tracking-tighter mb-4">OUR {city.toUpperCase()} MD {niche.toUpperCase()} PROCESS</h2>
-				<hr class="w-24 border-b-8 border-[#28657c] mx-auto mt-6" />
-			</div>
-
-			<div class="grid md:grid-cols-4 gap-4">
-				
-				<div class="bg-white p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-[#28657c] transition-all">
-					<div class="text-6xl font-black text-slate-100 absolute -right-2 -top-2 group-hover:text-[#28657c]/10 transition-colors">01</div>
-					<h5 class="font-black text-[#28657c] uppercase mb-4 relative z-10">CASE AUDIT</h5>
-					<p class="text-sm text-slate-500 relative z-10 leading-relaxed">Deep-dive analysis of your stop, arrest procedures, and BAC testing logs in the Towson area.</p>
-				</div>
-				<div class="bg-white p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-[#28657c] transition-all">
-					<div class="text-6xl font-black text-slate-100 absolute -right-2 -top-2 group-hover:text-[#28657c]/10 transition-colors">02</div>
-					<h5 class="font-black text-[#28657c] uppercase mb-4 relative z-10">MVA DEFENSE</h5>
-					<p class="text-sm text-slate-500 relative z-10 leading-relaxed">Immediate filing of hearing requests to protect your Maryland driving privileges from automatic suspension.</p>
-				</div>
-				<div class="bg-white p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-[#28657c] transition-all">
-					<div class="text-6xl font-black text-slate-100 absolute -right-2 -top-2 group-hover:text-[#28657c]/10 transition-colors">03</div>
-					<h5 class="font-black text-[#28657c] uppercase mb-4 relative z-10">NEGOTIATION</h5>
-					<p class="text-sm text-slate-500 relative z-10 leading-relaxed">Leveraging technical evidence errors to secure alternative sentencing, PBJ, or case dismissal in MD courts.</p>
-				</div>
-				<div class="bg-white p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-[#28657c] transition-all">
-					<div class="text-6xl font-black text-slate-100 absolute -right-2 -top-2 group-hover:text-[#28657c]/10 transition-colors">04</div>
-					<h5 class="font-black text-[#28657c] uppercase mb-4 relative z-10">RESOLUTION</h5>
-					<p class="text-sm text-slate-500 relative z-10 leading-relaxed">Final disposition and guidance on license restoration and maintaining a clean Maryland record.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- 4. AUTHORITY SECTION -->
-	<section class="py-24 bg-white border-t border-slate-100">
-		<div class="container mx-auto px-6 max-w-4xl">
-			<div class="prose prose-slate prose-lg max-w-none">
-				<h2 class="text-4xl font-black text-[#28657c] uppercase tracking-tighter mb-8">Professional {DUI Defense} Excellence in {Towson} Maryland</h2>
-				<p>
-					When it comes to maintaining your property's infrastructure in {Towson}, Maryland, you cannot afford to take shortcuts. Unlike the big national franchises that use generic call centers, our {DUI Defense} team is based right here in {Towson}. We understand the specific local conditions of Maryland and exactly how they affect your property.
-				</p>
-                
-                <div class="bg-red-50 border-2 border-red-200 p-8 rounded-2xl my-12">
-                    <h5 class="text-red-800 font-black uppercase mb-4">Attorney Advertising & Disclaimers</h5>
-                    <p class="text-red-700 text-xs leading-relaxed mb-0">
-                        This website is a legal marketing property operated by DigiiState. The information provided is not legal advice and does not create an attorney-client relationship. Lead inquiries are routed to a licensed Maryland attorney who is the primary service provider for this territory. Results are not guaranteed and past performance does not indicate future outcomes.
-                    </p>
-                </div>
-			</div>
-		</div>
-	</section>
-
-	<!-- 5. HYPER-LOCAL SERVICE AREA FOOTER -->
-	<section class="py-16 bg-slate-950 text-slate-500">
-		<div class="container mx-auto px-6 text-center">
-			<h5 class="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-white opacity-40">Maryland Service Region Coverage</h5>
-			<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-widest leading-loose">
-				<span>Phoenix</span> <span>Clarksville</span> <span>Hunt Valley</span> <span>Monkton</span> <span>Sparks</span> <span>Cockeysville</span> <span>Timonium</span> <span>Towson</span> <span>Ellicott City</span> <span>Columbia</span> <span>Gibson Island</span> <span>Annapolis</span> <span>Severna Park</span> <span>Arnold</span> <span>Howard County</span> <span>Baltimore County</span> <span>Anne Arundel County</span>
-			</div>
-		</div>
-	</section>
 </Layout>
 
 <script is:inline>
@@ -140,7 +77,7 @@ const serviceImage = "https://images.unsplash.com/photo-1584622650111-993a426fbf
 	const status = document.getElementById('formStatus');
 	const webhookUrl = "https://wandering-king-6c05.empty-math-6c0f.workers.dev";
 
-	form?.addEventListener('submit', async (e) => {{
+	form?.addEventListener('submit', async (e) => {
 		e.preventDefault();
 		const formData = new FormData(form);
 		const data = Object.fromEntries(formData.entries());
@@ -148,22 +85,22 @@ const serviceImage = "https://images.unsplash.com/photo-1584622650111-993a426fbf
 		data.source = window.location.hostname;
 		data.timestamp = new Date().toISOString();
 
-		try {{
+		try {
 			status.textContent = "SENDING REQUEST...";
-			const response = await fetch(webhookUrl, {{
+			const response = await fetch(webhookUrl, {
 				method: 'POST',
-				headers: {{ 'Content-Type': 'application/json' }},
+				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(data)
-			}});
+			});
 
-			if (response.ok) {{
+			if (response.ok) {
 				status.textContent = "✅ SUCCESS! WE WILL CALL YOU SHORTLY.";
 				form.reset();
-			}} else {{
+			} else {
 				throw new Error();
-			}}
-		}} catch (err) {{
+			}
+		} catch (err) {
 			status.textContent = "❌ ERROR SENDING. PLEASE CALL US NOW.";
-		}}
-	}});
+		}
+	});
 </script>
