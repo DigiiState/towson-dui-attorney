@@ -102,7 +102,7 @@ const currentServices = servicesByNiche[niche] || servicesByNiche["Septic Pumpin
 						</div>
 						<a href="/contact" class="hover:underline">Contact</a>
 					</nav>
-					<a href={`tel:${phone.replace(/-/g, '')}`} class="text-xl font-bold text-[#28657c] border-2 border-[#28657c] px-4 py-1 hover:bg-[#28657c] hover:text-white transition-colors">
+					<a href={`tel:${phone.replace(/\D/g, '')}`} class="text-xl font-bold text-[#28657c] border-2 border-[#28657c] px-4 py-1 hover:bg-[#28657c] hover:text-white transition-colors">
 						{phone}
 					</a>
 				</div>
@@ -119,7 +119,7 @@ const currentServices = servicesByNiche[niche] || servicesByNiche["Septic Pumpin
 						<h4 class="font-bold text-[#28657c] uppercase text-sm mb-6">Contact Us</h4>
 						<p class="text-sm mb-2">{city} {niche} Pros</p>
 						<p class="text-sm mb-2">{city}, Maryland</p>
-						<a href={`tel:${phone.replace(/-/g, '')}`} class="text-[#28657c] font-bold">{phone}</a>
+						<a href={`tel:${phone.replace(/\D/g, '')}`} class="text-[#28657c] font-bold">{phone}</a>
 					</div>
 					<div>
 						<h4 class="font-bold text-[#28657c] uppercase text-sm mb-6">Quick Links</h4>

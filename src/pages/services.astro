@@ -40,7 +40,7 @@ const serviceImage = "https://images.unsplash.com/photo-1584622650111-993a426fbf
 				<div class="order-2 md:order-1">
 					<h2 class="text-3xl font-bold text-[#28657c] mb-6 uppercase tracking-tighter">24/7 Emergency Support</h2>
 					<p class="text-slate-600 leading-relaxed mb-8">System failures don't happen on a schedule. That's why we offer around-the-clock emergency response for the {city} community. We'll be there when you need us most.</p>
-					<a href={`tel:${phone.replace(/-/g, '')}`} class="inline-block border-2 border-[#28657c] text-[#28657c] px-8 py-3 font-bold uppercase tracking-tighter hover:bg-[#28657c] hover:text-white transition-colors">Call Dispatch Now</a>
+					<a href={`tel:${phone.replace(/\D/g, '')}`} class="inline-block border-2 border-[#28657c] text-[#28657c] px-8 py-3 font-bold uppercase tracking-tighter hover:bg-[#28657c] hover:text-white transition-colors">Call Dispatch Now</a>
 				</div>
 				<img src="https://sc02.alicdn.com/kf/A7bbd8d3c7a744fa994400de2ba60f6617.png" alt="Emergency Service" class="w-full h-80 object-cover rounded shadow-lg order-1 md:order-2" />
 			</div>
