@@ -6,7 +6,7 @@ interface Props {
 	niche?: string;
 }
 
-const { title, phone = "866-891-9778", city = "Maryland", niche = "Local Service" } = Astro.props;
+const { title, phone = "(410) 261-4403", city = "Maryland", niche = "Local Service" } = Astro.props;
 
 // Niche-specific services mapping
 const servicesByNiche: Record<string, {name: string, slug: string}[]> = {
